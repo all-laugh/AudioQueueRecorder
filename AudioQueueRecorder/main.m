@@ -88,13 +88,13 @@ static void CopyEncoderCookieToFile(AudioQueueRef queue,
         Byte *magicCookie = (Byte *) malloc(propertySize);
         CheckError(AudioQueueGetProperty(queue,
                                          kAudioQueueProperty_MagicCookie,
-                                         &magicCookie,
+                                         magicCookie,
                                          &propertySize),
                    "AudioQueueGetProperty failed getting magic cookie from queue");
         CheckError(AudioFileSetProperty(file,
                                         kAudioFilePropertyMagicCookieData,
                                         propertySize,
-                                        &magicCookie),
+                                        magicCookie),
                    "AudioFileSetProperty failed setting magic cookie to file");
         
         free(magicCookie);
