@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		502C6AC22767B90A002EAB50 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502C6AC12767B90A002EAB50 /* CoreFoundation.framework */; platformFilter = maccatalyst; };
 		50B1B9A12767962D00294E06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B1B9A02767962D00294E06 /* main.m */; };
 		50B1B9A92767965600294E06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B1B9A82767965600294E06 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		502C6AC12767B90A002EAB50 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		502C6AC32767BAEA002EAB50 /* AudioQueueRecorder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AudioQueueRecorder.entitlements; sourceTree = "<group>"; };
 		50B1B99D2767962D00294E06 /* AudioQueueRecorder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AudioQueueRecorder; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B1B9A02767962D00294E06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50B1B9A82767965600294E06 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -34,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502C6AC22767B90A002EAB50 /* CoreFoundation.framework in Frameworks */,
 				50B1B9A92767965600294E06 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +65,7 @@
 		50B1B99F2767962D00294E06 /* AudioQueueRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				502C6AC32767BAEA002EAB50 /* AudioQueueRecorder.entitlements */,
 				50B1B9A02767962D00294E06 /* main.m */,
 			);
 			path = AudioQueueRecorder;
@@ -69,6 +74,7 @@
 		50B1B9A72767965600294E06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				502C6AC12767B90A002EAB50 /* CoreFoundation.framework */,
 				50B1B9A82767965600294E06 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
@@ -252,6 +258,7 @@
 		50B1B9A52767962D00294E06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AudioQueueRecorder/AudioQueueRecorder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XDPTRV2722;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -262,6 +269,7 @@
 		50B1B9A62767962D00294E06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AudioQueueRecorder/AudioQueueRecorder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XDPTRV2722;
 				ENABLE_HARDENED_RUNTIME = YES;
